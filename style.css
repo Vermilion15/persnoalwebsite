@@ -1,0 +1,63 @@
+
+:root {
+    /* --primary-color : #edf2fc;
+    --secondary-color : #212121 */
+    --primary-color : #000106;
+    --secondary-color : #fff;
+}
+
+nav  {
+    box-shadow: 5px 5px 8px #8888;
+}
+nav ul li:hover{
+    text-decoration: underline;
+}
+
+.intro h2 {
+    color: var(--secondary-color);
+}
+
+.intro p {
+    color: var(--secondary-color);
+}
+
+.jumbotron {
+    background-color: var(--bs-body-bg);
+}
+.btn:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    width: 100%;
+    height: 8rem;
+    background: #273036;
+}
+
+#heroSection {
+    box-shadow: 5px 5px 5px #273036, -5px -5px 5px #273036;
+}
+
+.teks {
+    font-family:Arial, Helvetica, sans-serif ;
+}
+
+#project {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica";
+}
+
+
+.service{
+    color: var(--bs-danger);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.project{
+    color: var(--bs-danger);
+}
+.kard{
+    box-shadow: 5px 5px 20px black;
+}
+

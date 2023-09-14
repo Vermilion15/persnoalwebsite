@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Demo</title>
+  </head>
+  <body>
+    <div>
+      <!-- navbar section -->
+      <nav
+        class="navbar navbar-expand-lg sticky-top"
+        style="background-color: var(--bs-body-bg)"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Bienvenue ✌</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#hero">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Contact">Contact</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Others
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#Service">Service</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#project"> My Project</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="nav-item dropdown">
+              <button
+                class="btn nav-link dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-brightness-high-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+                  />
+                </svg>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <button
+                    class="dropdown-item d-flex align-items-end"
+                    type="button"
+                    data-bs-theme-value="light"
+                  >
+                    <svg
+                      class="me-3"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-brightness-high-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+                      />
+                    </svg>
+                    light
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="dropdown-item d-flex align-items-end"
+                    type="button"
+                    data-bs-theme-value="dark"
+                  >
+                    <svg
+                      class="me-3"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-moon-stars-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+                      />
+                      <path
+                        d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+                      />
+                    </svg>
+                    dark
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar end -->
+      <!-- Hero Section -->
+      <section id="hero">
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <div class="text-center mt-4 mb-3">
+              <img
+                src="Assets/avatar.jpg"
+                class="rounded"
+                alt="avatar.jpg "
+                id="heroSection"
+              />
+            </div>
+            <div class="teks">
+              <h2 class="intro display-3 text-center">
+                I'm <span style="color: var(--bs-danger)">Sulthan</span> Dzaky
+              </h2>
+              <p class="intro lead text-center fs-3">Junior Front-end Dev</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Hero End  -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#273036"
+          fill-opacity="1"
+          d="M0,224L48,234.7C96,245,192,267,288,272C384,277,480,267,576,240C672,
+          213,768,171,864,154.7C960,139,1056,149,1152,170.7C1248,192,1344,224,1392
+          ,240L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,
+          320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+
+      <!-- Service section -->
+      <section id="Service">
+        <div class="container mt-5" id="card">
+          <h1 class="text-center mb-4 service">My Service</h1>
+          <div class="row align-items-center justify-content-around">
+            <div class="card col-4 col-md-3 mb-3" style="width: 18rem">
+              <img src="Assets/Website UI.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Create Personal Website</h5>
+                <p class="card-text">
+                  Create a Personal website or business small-scale website with
+                  low price hosting
+                </p>
+                <a
+                  href="#Contact"
+                  class="btn"
+                  style="
+                    background-color: var(--bs-body-color);
+                    color: var(--bs-body-bg);
+                  "
+                  >Try Now</a
+                >
+              </div>
+            </div>
+            <div class="card col-4 col-md-3 mb-3" style="width: 18rem">
+              <img
+                src="Assets/Wordpress Website.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Website with Wordpress</h5>
+                <p class="card-text">
+                  with relatively low price you get website that built With the
+                  best website builder
+                </p>
+                <a
+                  href="#"
+                  class="btn"
+                  style="
+                    background-color: var(--bs-body-color);
+                    color: var(--bs-body-bg);
+                  "
+                  >Try Now</a
+                >
+              </div>
+            </div>
+            <div class="card col-4 col-md-3 mb-3" style="width: 18rem">
+              <img
+                src="Assets/ArticleDesign.avif"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Make an article</h5>
+                <p class="card-text">
+                  Offer you a service to make an article,like school assignment
+                  etc.
+                </p>
+                <a
+                  href="#"
+                  class="btn"
+                  style="
+                    background-color: var(--bs-body-color);
+                    color: var(--bs-body-bg);
+                  "
+                  >Try Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="#273036"
+        fill-opacity="1"
+        d="M0,192L48,176C96,160,192,128,288,133.3C384,139,
+        480,181,576,213.3C672,245,768,267,864,240C960,213,
+        1056,139,1152,128C1248,117,1344,171,1392,197.3L1440,
+        224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,
+        320,960,320,864,320C768,320,672,320,576,320C480,320,384,
+        320,288,320C192,320,96,320,48,320L0,320Z"
+      ></path>
+    </svg>
+    <!-- Card end -->
+    <!-- Project Section -->
+    <section id="project">
+      <div class="container mt-5 mb-5">
+        <h1 class="text-center mb-5 project">My Project</h1>
+        <div class="row align-items-center justify-content-around">
+          <div class="card col-4 col-md-3 mb-3" style="width: 18rem">
+            <img
+              src="Assets/dark theme icon/Screenshot 2023-09-14 005924.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Personal Website</h5>
+              <p class="card-text">
+                This is my first personal website,build it with html,css,and
+                bootstrap
+              </p>
+            </div>
+          </div>
+          <div class="card col-4 col-md-3 mb-3" style="width: 18rem">
+            <img
+              src="Assets/dark theme icon/Screenshot 2023-09-14 010102.png"
+              class="card-img-top"
+              alt="..."
+              style="height: 130px"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Website providing images</h5>
+              <p class="card-text">
+                I created it in order to providing images landscape,i created
+                this website with bootsrap aswell.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- project end -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="#273036"
+        fill-opacity="1"
+        d="M0,288L48,261.3C96,235,192,181,288,149.3C384,117,480,107,576,128C672,149,768,203,864,192C960,181,1056,107,1152,106.7C1248,107,1344,181,1392,218.7L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+      ></path>
+    </svg>
+    <!-- Contact Section -->
+    <div class="container mt-5" id="Contact">
+      <div class="mb-3 mt-3">
+        <label for="exampleFormControlInput1" class="form-label">Name</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" />
+        <div class="mb-3 mt-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Email address</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="name@example.com"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label"
+            >Message</label
+          >
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+          ></textarea>
+        </div>
+        <button
+          class="btn"
+          style="
+            background-color: var(--bs-body-color);
+            color: var(--bs-body-bg);
+          "
+        >
+          submit
+        </button>
+      </div>
+    </div>
+    <!-- Contact End -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="#273036"
+        fill-opacity="1"
+        d="M0,224L48,197.3C96,171,192,117,288,133.3C384,149,480,235,576,240C672,245,768,171,864,160C960,149,1056,203,1152,218.7C1248,235,1344,213,1392,202.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+      ></path>
+    </svg>
+    <!-- Footer Section -->
+    <footer class="text-center text-white">
+      <p class="text-white">Email = seigneur.noir15@gmail.com</p>
+      <p class="text-white">whatsapp Number = +6281584831891</p>
+      <a href="https://www.instagram.com/ichbin_verr/"
+        ><i class="bi bi-instagram text-white me-2"></i
+      ></a>
+      <a href="https://wa.me/081584831891"
+        ><i class="bi bi-whatsapp text-white me-2"></i
+      ></a>
+      <a href="https://www.linkedin.com/in/sulthandzaky15/"
+        ><i class="bi bi-linkedin text-white"></i
+      ></a>
+      <a href="https://github.com/Vermilion15/"
+        ><i class="bi bi-github text-white ms-2"></i
+      ></a>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      /*!
+       * Color mode toggler for Bootstrap's docs (https://getbootstrap.com/)
+       * Copyright 2011-2023 The Bootstrap Authors
+       * Licensed under the Creative Commons Attribution 3.0 Unported License.
+       */
+
+      (() => {
+        "use strict";
+
+        const getStoredTheme = () => localStorage.getItem("theme");
+        const setStoredTheme = (theme) => localStorage.setItem("theme", theme);
+
+        const getPreferredTheme = () => {
+          const storedTheme = getStoredTheme();
+          if (storedTheme) {
+            return storedTheme;
+          }
+
+          return window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        };
+
+        const setTheme = (theme) => {
+          if (
+            theme === "auto" &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches
+          ) {
+            document.documentElement.setAttribute("data-bs-theme", "dark");
+          } else {
+            document.documentElement.setAttribute("data-bs-theme", theme);
+          }
+        };
+
+        setTheme(getPreferredTheme());
+
+        const showActiveTheme = (theme, focus = false) => {
+          const themeSwitcher = document.querySelector("#bd-theme");
+
+          if (!themeSwitcher) {
+            return;
+          }
+
+          const themeSwitcherText = document.querySelector("#bd-theme-text");
+          const activeThemeIcon = document.querySelector(
+            ".theme-icon-active use"
+          );
+          const btnToActive = document.querySelector(
+            `[data-bs-theme-value="${theme}"]`
+          );
+          const svgOfActiveBtn = btnToActive
+            .querySelector("svg use")
+            .getAttribute("href");
+
+          document
+            .querySelectorAll("[data-bs-theme-value]")
+            .forEach((element) => {
+              element.classList.remove("active");
+              element.setAttribute("aria-pressed", "false");
+            });
+
+          btnToActive.classList.add("active");
+          btnToActive.setAttribute("aria-pressed", "true");
+          activeThemeIcon.setAttribute("href", svgOfActiveBtn);
+          const themeSwitcherLabel = `${themeSwitcherText.textContent} (${btnToActive.dataset.bsThemeValue})`;
+          themeSwitcher.setAttribute("aria-label", themeSwitcherLabel);
+
+          if (focus) {
+            themeSwitcher.focus();
+          }
+        };
+
+        window
+          .matchMedia("(prefers-color-scheme: dark)")
+          .addEventListener("change", () => {
+            const storedTheme = getStoredTheme();
+            if (storedTheme !== "light" && storedTheme !== "dark") {
+              setTheme(getPreferredTheme());
+            }
+          });
+
+        window.addEventListener("DOMContentLoaded", () => {
+          showActiveTheme(getPreferredTheme());
+
+          document
+            .querySelectorAll("[data-bs-theme-value]")
+            .forEach((toggle) => {
+              toggle.addEventListener("click", () => {
+                const theme = toggle.getAttribute("data-bs-theme-value");
+                setStoredTheme(theme);
+                setTheme(theme);
+                showActiveTheme(theme, true);
+              });
+            });
+        });
+      })();
+    </script>
+  </body>
+</html>
