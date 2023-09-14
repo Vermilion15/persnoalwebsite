@@ -304,40 +304,78 @@
     </svg>
     <!-- Contact Section -->
     <div class="container mt-5" id="Contact">
-      <div class="mb-3 mt-3">
-        <label for="exampleFormControlInput1" class="form-label">Name</label>
-        <input type="text" class="form-control" id="exampleFormControlInput1" />
+      <h1 class="text-center mt-3">Contact</h1>
+      <div
+        class="alert alert-success alert-dismissible fade show d-none"
+        role="alert"
+      >
+        <strong>Thank You!</strong> Your message has sent.
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+      <form name="submit-to-google-sheet">
         <div class="mb-3 mt-3">
-          <label for="exampleFormControlInput1" class="form-label"
-            >Email address</label
-          >
+          <label for="exampleFormControlInput1" class="form-label">Name</label>
           <input
-            type="email"
+            type="text"
             class="form-control"
             id="exampleFormControlInput1"
-            placeholder="name@example.com"
+            name="name"
           />
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label"
-            >Message</label
+          <div class="mb-3 mt-3">
+            <label for="exampleFormControlInput1" class="form-label"
+              >Email address</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="exampleFormControlInput1"
+              placeholder="name@example.com"
+              name="email"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label"
+              >Message</label
+            >
+            <textarea
+              class="form-control"
+              id="exampleFormControlTextarea1"
+              rows="3"
+              name="message"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="btn btn-kirim"
+            style="
+              background-color: var(--bs-body-color);
+              color: var(--bs-body-bg);
+            "
           >
-          <textarea
-            class="form-control"
-            id="exampleFormControlTextarea1"
-            rows="3"
-          ></textarea>
+            submit
+          </button>
+          <button
+            class="btn btn-loading d-none"
+            type="button"
+            disabled
+            style="
+              background-color: var(--bs-body-color);
+              color: var(--bs-body-bg);
+            "
+          >
+            <span
+              class="spinner-border spinner-border-sm"
+              aria-hidden="true"
+            ></span>
+            <span role="status">Loading...</span>
+          </button>
         </div>
-        <button
-          class="btn"
-          style="
-            background-color: var(--bs-body-color);
-            color: var(--bs-body-bg);
-          "
-        >
-          submit
-        </button>
-      </div>
+      </form>
     </div>
     <!-- Contact End -->
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -370,6 +408,34 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbyjI_NF_oc5PEix3GJi-KU1V7JWIT7jCPGc5Sl2elvYv7QqK9aUk8UuNt_0QJBm7d-X/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+      const myAlert = document.querySelector(".alert");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        // When Submit Clicked
+        // show loading spinner,remove submit button
+        btnLoading.classList.toggle("d-none");
+        btnKirim.classList.toggle("d-none");
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            // Show Submit Button , remove Loading spinner
+            btnLoading.classList.toggle("d-none");
+            btnKirim.classList.toggle("d-none");
+            // Show alert
+            myAlert.classList.toggle('d-none')
+            // reset form
+            form.reset();
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
 
     <script>
       /*!
