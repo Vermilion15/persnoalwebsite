@@ -61,3 +61,6 @@ footer {
     box-shadow: 5px 5px 20px black;
 }
 
+#Service {
+    background-color: var(--bs-body-bg);
+}
