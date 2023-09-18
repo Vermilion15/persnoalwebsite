@@ -157,7 +157,7 @@
               <h2 class="intro display-3 text-center">
                 I'm <span style="color: var(--bs-danger)">Sulthan</span> Dzaky
               </h2>
-              <p class="intro lead text-center fs-3">Junior Front-end Dev</p>
+              <p class="intro lead text-center fs-3"></p>
             </div>
           </div>
         </div>
@@ -420,6 +420,18 @@
     <script>
       AOS.init({ once: true,});
     </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to('.lead',{duration:1.5,delay:1,text:"Junior Front-end Dev"})
+      gsap.from('.jumbotron img',{duration:1,y:-100,opacity:0,ease:'bounce'});
+      gsap.from('.navbar',{duration:1.5,y:'-100%',opacity:0,ease:'bounce'})
+      gsap.from('.display-3',{duration:1,x:-50,opacity:0,delay:0.5,ease:'back'})
+
+    </script>
+
     <script>
       const scriptURL =
         "https://script.google.com/macros/s/AKfycbyjI_NF_oc5PEix3GJi-KU1V7JWIT7jCPGc5Sl2elvYv7QqK9aUk8UuNt_0QJBm7d-X/exec";
